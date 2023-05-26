@@ -18,3 +18,13 @@ select,
 textarea {
     max-width: 280px;
 }
+.navabr-inverse{
+    background-color:#d41d50;
+    border-color:#fbf6f6;
+}
+.navabr-inverse.navabr-nav > li >a {
+    color:white;
+}
+.navabr-inverse.navabr-brand{
+    color:white;
+}
