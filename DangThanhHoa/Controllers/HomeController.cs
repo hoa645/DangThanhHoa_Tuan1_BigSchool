@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DangThanhHoa.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,17 @@ namespace DangThanhHoa.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _dbContext;
+        public HomeController()
+        {
+            _dbContext=new ApplicationDbContext();
+        }
         public ActionResult Index()
         {
-            return View();
+            var upcommingCourses = _dbContext.Coureses
+               
+                .Where(c => c.Datetime > DateTime.Now);
+            return View(upcommingCourses);
         }
 
         public ActionResult About()
