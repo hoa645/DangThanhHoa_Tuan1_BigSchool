@@ -13,7 +13,7 @@ namespace DangThanhHoa.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202305250302088_InitialModel"; }
+            get { return "202306020319355_InitialModel"; }
         }
         
         string IMigrationMetadata.Source
